@@ -1,1 +1,3 @@
-# CS-330-Final-Project
+# CS-330:Computer Graphic and Visualization - Final Project
+
+Project details will go here...
