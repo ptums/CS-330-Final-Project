@@ -35,3 +35,5 @@
 #File types too big for github
 *.ipch
 *.db
+
+.DS_Store
