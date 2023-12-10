@@ -101,6 +101,7 @@ void UCreateGolfBallMesh(GLMesh& mesh);
 void UCreateAirPodMesh(GLMesh& mesh);
 void UCreateGlassMesh(GLMesh& mesh);
 void UDestroyMesh(GLMesh& mesh);
+void UDestroyProgram();
 bool UCreateTexture(const char* filename, GLuint& textureId, bool flipImg);
 void UDestroyTexture(GLuint textureId);
 void URender(GLFWwindow* window);
@@ -316,26 +317,7 @@ int main(int argc, char* argv[])
         glfwPollEvents();
     }
 
-    // Release mesh data
-    UDestroyMesh(gKeyboardMesh);
-    UDestroyMesh(gGolfBallMesh);
-    UDestroyMesh(gAirPodMesh);
-    UDestroyMesh(gGlassMesh);
-    UDestroyMesh(gDeskMesh);
-    UDestroyMesh(gDeskMatMesh);
-
-    // Release texture
-    UDestroyTexture(gTextureGolfBallId);
-    UDestroyTexture(gTextureAirPodId);
-    UDestroyTexture(gTextureKeyboardId);
-    UDestroyTexture(gTextureDeskId);
-    UDestroyTexture(gTextureDeskMatId);
-    UDestroyTexture(gTextureGlassId);
-
-
-    // Release shader program
-    UDestroyShaderProgram(gProgramId);
-
+    UDestroyProgram();
     exit(EXIT_SUCCESS); // Terminates the program successfully
 }
 
@@ -1199,4 +1181,28 @@ void UMouseButtonCallback(GLFWwindow*, int button, int action, int mods)
 void UDestroyShaderProgram(GLuint programId)
 {
     glDeleteProgram(programId);
+}
+
+void UDestroyProgram()
+{
+    // Release mesh data
+    UDestroyMesh(gKeyboardMesh);
+    UDestroyMesh(gGolfBallMesh);
+    UDestroyMesh(gAirPodMesh);
+    UDestroyMesh(gGlassMesh);
+    UDestroyMesh(gDeskMesh);
+    UDestroyMesh(gDeskMatMesh);
+
+    // Release texture
+    UDestroyTexture(gTextureGolfBallId);
+    UDestroyTexture(gTextureAirPodId);
+    UDestroyTexture(gTextureKeyboardId);
+    UDestroyTexture(gTextureDeskId);
+    UDestroyTexture(gTextureDeskMatId);
+    UDestroyTexture(gTextureGlassId);
+
+
+    // Release shader program
+    UDestroyShaderProgram(gProgramId);
+
 }
