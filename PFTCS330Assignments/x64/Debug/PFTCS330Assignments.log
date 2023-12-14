@@ -1,4 +1,0 @@
-﻿  Source.cpp
-  LINK : C:\Users\tumultymedia2\source\repos\PFTCS330Assignments\Debug\PFTCS330Assignments.exe not found or not built by the last incremental link; performing full link
-C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(1134,5): error MSB6006: "link.exe" exited with code 1104.
-LINK : fatal error LNK1104: cannot open file 'glew32.lib'
